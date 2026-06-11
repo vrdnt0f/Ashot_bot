@@ -1,12 +1,18 @@
 #Ашот — Telegram-бот шашлычника
 
-Чат-бот с персонажем Ашота — колоритного владельца кавказской шашлычной. Построен на базе локальной LLM через [LM Studio](https://lmstudio.ai/) и фреймворке [aiogram 3](https://docs.aiogram.dev/).
+Чат-бот с персонажем Ашота — колоритного владельца кавказской шашлычной «У Ашота». Построен на базе локальной LLM через [LM Studio](https://lmstudio.ai/) и фреймворке [aiogram 3](https://docs.aiogram.dev/).
 
 ## Возможности
 
 - Диалог с запоминанием истории (последние 20 сообщений)
-- Команда `/start` — начать общение
+- Команда `/start` — начать общение с Ашотом
+- Команда `/help` — список всех команд
 - Команда `/reset` — сбросить историю диалога
+- Команда `/menu` — меню шашлычной с ценами
+- Команда `/recipe` — рецепт шашлыка от Ашота
+- Команда `/wisdom` — мудрость дня от Ашота
+- Команда `/joke` — кавказский анекдот
+- Команда `/roast` — Ашот тебя подкалывает
 - Обработка ошибок подключения к LM Studio
 
 ## Требования
@@ -19,8 +25,8 @@
 
 ```bash
 # 1. Клонировать репозиторий
-git clone https://github.com/your-username/ashot-bot.git
-cd ashot-bot
+git clone https://github.com/vrdnt0f/Ashot_bot.git
+cd Ashot_bot
 
 # 2. Создать виртуальное окружение
 python -m venv venv
@@ -40,21 +46,12 @@ cp .env.example .env
 python Ashot.py
 ```
 
-## Настройка LM Studio
-
-1. Открыть LM Studio → вкладка **Developer** → **Local Server**
-2. Выбрать модель из выпадающего списка
-3. Нажать переключатель **Status: Stopped** → сервер запустится на `http://localhost:1234`
-4. Скопировать **API Model Identifier** из правой панели в `.env` → `MODEL_NAME`
-
-
 ## Структура проекта
 
 ```
-ashot-bot/
+Ashot_bot/
 ├── Ashot.py         # Основной файл бота
 ├── requirements.txt # Зависимости
-├── .env.example     # Шаблон переменных окружения
 ├── .env             # Локальные настройки (не в git!)
 ├── .gitignore
 └── README.md
